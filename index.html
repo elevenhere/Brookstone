@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>BROOKSTONE - Investment Platform</title>
+
+<style>
+:root{
+  --primary:#ffd166;
+  --accent:#ffb703;
+  --text:#f8fafc;
+  --muted:#e2e8f0;
+  --border:rgba(255,255,255,0.14);
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:system-ui, -apple-system, Segoe UI, Roboto, Arial;
+}
+
+html{scroll-behavior:smooth;}
+
+body{
+  color:var(--text);
+  background:url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab') center/cover no-repeat fixed;
+  min-height:100vh;
+}
+
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.22);
+  z-index:-1;
+}
+
+/* NAV */
+.navbar{
+  position:fixed;
+  top:0;
+  width:100%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:14px 5%;
+  background:rgba(0,0,0,0.35);
+  backdrop-filter: blur(16px);
+  border-bottom:1px solid var(--border);
+  z-index:1000;
+}
+
+.logo{
+  font-weight:800;
+  letter-spacing:2px;
+  color:var(--primary);
+}
+
+.nav-links{
+  display:flex;
+  gap:22px;
+}
+
+.nav-links a{
+  color:var(--primary);
+  text-decoration:none;
+  font-size:14px;
+}
+
+.nav-links a:hover{
+  color:var(--accent);
+}
+
+/* HERO */
+.hero{
+  height:100vh;
+  display:flex;
+  align-items:center;
+  padding:0 8%;
+}
+
+.hero-content{
+  max-width:720px;
+  background:rgba(0,0,0,0.55);
+  border:1px solid var(--border);
+  padding:40px;
+  border-radius:24px;
+  backdrop-filter: blur(16px);
+}
+
+.hero h1{
+  font-size:70px;
+  color:var(--primary);
+}
+
+.hero p{
+  line-height:1.7;
+  color:var(--muted);
+}
+
+.btn{
+  margin-top:22px;
+  display:inline-block;
+  padding:12px 26px;
+  border-radius:14px;
+  background:linear-gradient(90deg,var(--primary),var(--accent));
+  color:#1a1300;
+  font-weight:800;
+  text-decoration:none;
+}
+
+/* SECTIONS */
+.section{
+  margin:60px auto;
+  padding:70px 5%;
+  max-width:1100px;
+  background:rgba(0,0,0,0.5);
+  border:1px solid var(--border);
+  border-radius:24px;
+  text-align:center;
+}
+
+.section h2{
+  font-size:34px;
+  color:var(--primary);
+}
+
+.section p{
+  color:var(--muted);
+}
+
+.card-container{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:18px;
+  margin-top:30px;
+}
+
+.card{
+  padding:22px;
+  border-radius:18px;
+  background:rgba(255,255,255,0.10);
+  border:1px solid var(--border);
+}
+
+.card h3{
+  color:var(--primary);
+}
+
+/* CONTACT */
+.contact-card{
+  padding:30px;
+  border-radius:20px;
+  background:rgba(0,0,0,0.55);
+  border:1px solid var(--border);
+  max-width:520px;
+  margin:auto;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:25px;
+  margin-top:40px;
+  color:var(--muted);
+  font-size:14px;
+  border-top:1px solid var(--border);
+  background:rgba(0,0,0,0.35);
+  backdrop-filter: blur(10px);
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="navbar">
+  <div class="logo">BROOKSTONE</div>
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#features">Sectors</a>
+    <a href="#invest">Invest</a>
+    <a href="#contact">Contact</a>
+  </div>
+</div>
+
+<section class="hero">
+  <div class="hero-content">
+    <h1>BROOKSTONE</h1>
+    <p>Investment firm focused on eco-friendly innovation in clean energy, recycling, and water solutions.</p>
+    <a href="#invest" class="btn">Explore Investments</a>
+  </div>
+</section>
+
+<section class="section" id="about">
+  <h2>About</h2>
+  <p>We invest in sustainable technologies shaping the future of global industries.</p>
+</section>
+
+<section class="section" id="features">
+  <h2>Sectors</h2>
+  <div class="card-container">
+    <div class="card"><h3>Clean Energy</h3><p>Renewables & green power</p></div>
+    <div class="card"><h3>Recycling</h3><p>Circular economy solutions</p></div>
+    <div class="card"><h3>Water</h3><p>Purification technologies</p></div>
+  </div>
+</section>
+
+<section class="section" id="invest">
+  <h2>Investment</h2>
+  <div class="card-container">
+    <div class="card"><h3>Seed</h3><p>Early-stage funding</p></div>
+    <div class="card"><h3>Growth</h3><p>Scaling startups</p></div>
+    <div class="card"><h3>Strategy</h3><p>Long-term partnerships</p></div>
+  </div>
+</section>
+
+<section class="section" id="contact">
+  <div class="contact-card">
+    <h2>Contact</h2>
+    <p><strong>Phone:</strong> +216 77007007</p>
+    <p><strong>Email:</strong> brookstone@gmail.com</p>
+    <p><strong>Head Office:</strong> Sousse, Tunisia</p>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 BROOKSTONE. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
